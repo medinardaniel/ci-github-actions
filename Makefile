@@ -4,14 +4,14 @@ install:
 
 test:
 	python3 -m pytest --nbval src/*.ipynb
-	python3 -m pytest -vv --cov=src.lib
+	python3 -m pytest -vv --cov=lib
 
 format:	
-	black src/*.py
+	black ./*.py
 	nbqa black src/*.ipynb 
 
 lint:
 	nbqa ruff src/*.ipynb
-	ruff check src/*.py
+	ruff check ./*.py
 		
 all: install lint test format
