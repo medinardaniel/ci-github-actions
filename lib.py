@@ -21,9 +21,13 @@ def bar_chart(df, column, title, xlabel, ylabel, color):
     plt.show()
 
 
-def get_percentiles(df, column):
+def get_percentiles(data_frame, column):
     """Percentiles function"""
-    percentile_25 = np.percentile(df[column], 25)
-    percentile_50 = np.percentile(df[column], 50)
-    percentile_75 = np.percentile(df[column], 75)
-    return percentile_25, percentile_50, percentile_75
+
+    # Specify the desired percentiles as fractions (e.g., 0.25 for 25th percentile)
+    percentiles = [0.25, 0.5, 0.75]  # Equivalent to 25th, 50th, and 75th percentiles
+
+    # Calculate the percentiles for a specific column (e.g., column 'A')
+    percentile_values = data_frame[column].quantile(q=percentiles)
+
+    return percentile_values

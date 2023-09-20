@@ -116,7 +116,7 @@ def main():
         f.write("## Descriptive Statistics Results\n\n")
         f.write(f"Mean: {res['mean']}\n\n")
         f.write(f"Median: {res['median']}\n\n")
-        f.write(f"Mode: {res['mode']}\n\n")
+        f.write(f"Mode: {res['mode'][0]}\n\n")
         f.write(f"25th Percentile: {res['25th_percentile']}\n\n")
         f.write(f"50th Percentile: {res['50th_percentile']}\n\n")
         f.write(f"75th Percentile: {res['75th_percentile']}\n\n")

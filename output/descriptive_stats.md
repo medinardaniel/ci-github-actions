@@ -4,12 +4,11 @@ Mean: 20.53
 
 Median: nan
 
-Mode: 0    18.0
-Name: Age, dtype: float64
+Mode: 18.0
 
-25th Percentile: nan
+25th Percentile: 18.0
 
-50th Percentile: nan
+50th Percentile: 19.0
 
-75th Percentile: nan
+75th Percentile: 23.0
 

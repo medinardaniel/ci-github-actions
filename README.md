@@ -6,12 +6,15 @@
 ![lint workflow](https://github.com/medinardaniel/ci-github-actions/actions/workflows/lint.yml/badge.svg)
 ![test workflow](https://github.com/medinardaniel/ci-github-actions/actions/workflows/test.yml/badge.svg)
 
+#### YouTube Walkthrough Link
+https://youtu.be/GnCb82L9MPg
+
 #### Summary
 In this project I use Continuous Integration and Github Actions for a Python-based data science project.
 #### Project Structure
-- Jupyter Notebook
-- Python Script
-- lib.py file: holds shared code between the Jupyter notebook and the Python script.
+- Jupyter Notebook: Analyzes student_mental_health.csv. Produces some general statistics on the dataset.
+- Python Script: Analyzes student_mental_health.csv. Produces some general statistics on the dataset. Same content as Jupyter Notebook.
+- lib.py file: Holds shared code between the Jupyter notebook and the Python script.
 - Makefile:
     - Runs all tests
     - Formats code with Python black
