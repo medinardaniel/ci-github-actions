@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 import os
 import pytest
 import sys
-sys.path.append('./src')
-from src.descriptive_stats import descriptive_stats, create_bar_charts
+# sys.path.append('../')
+from descriptive_stats import descriptive_stats, create_bar_charts
 
 def test_descriptive_stats():
     df = pd.DataFrame({'age': [20, 25, 30, 35, 40]})

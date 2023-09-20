@@ -105,13 +105,13 @@ def create_bar_charts(df, out_dir):
 def main():
 
     # read in the data
-    df = pd.read_csv("../data/student_mental_health.csv")
+    df = pd.read_csv("./data/student_mental_health.csv")
 
     # get descriptive_statistics results
     res = descriptive_stats(df, "Age")
 
     # open md file in output/ directory
-    with open("../output/descriptive_stats.md", "w") as f:
+    with open("./output/descriptive_stats.md", "w") as f:
         # write the results to the md file
         f.write("## Descriptive Statistics Results\n\n")
         f.write(f"Mean: {res['mean']}\n\n")
@@ -122,7 +122,7 @@ def main():
         f.write(f"75th Percentile: {res['75th_percentile']}\n\n")
 
     # create bar charts and store as png in output/ directory
-    create_bar_charts(df, out_dir="../output")
+    create_bar_charts(df, out_dir="./output")
 
 
 if __name__ == "__main__":

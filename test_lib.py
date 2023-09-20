@@ -3,8 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import sys
 # append the path of the src directory to import the lib module
-sys.path.append('./src')
-from src.lib import get_mean_median_mode, bar_chart, get_percentiles
+# sys.path.append('./')
+from lib import get_mean_median_mode, bar_chart, get_percentiles
 
 # Assuming your functions are in a module named "your_module_name"
 # and df is a DataFrame with relevant data
