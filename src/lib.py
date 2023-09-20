@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
+
 def get_mean_median_mode(df, column):
     """Mean, Median, Mode function"""
     mean_val = np.mean(df[column])
@@ -14,12 +15,11 @@ def get_mean_median_mode(df, column):
 def bar_chart(df, column, title, xlabel, ylabel, color):
     """Bar chart function"""
     col = df[column].str.upper()
-    col.value_counts().plot(kind='bar', color=color)
+    col.value_counts().plot(kind="bar", color=color)
     plt.title(title)
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
     plt.show()
-    return
 
 
 def get_percentiles(df, column):
