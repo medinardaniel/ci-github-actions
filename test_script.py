@@ -1,8 +1,7 @@
 import pandas as pd
-import pytest
 # import sys
 # sys.path.append('../')
-from descriptive_stats import descriptive_stats, create_bar_charts
+from descriptive_stats import descriptive_stats
 
 def test_descriptive_stats():
     df = pd.DataFrame({'age': [20, 25, 30, 35, 40]})
