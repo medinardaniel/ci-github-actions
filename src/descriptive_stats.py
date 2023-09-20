@@ -1,9 +1,11 @@
 """
 Descriptive Statistics Python Pandas script.
-In this script, we use the Python Pandas library to calculate descriptive statistics on a student
-mental health dataset, the same way that it's done in descriptive_stats.ipynb.
+In this script, we use the Python Pandas library to calculate descriptive
+statistics on a student mental health dataset, the same way that it's done
+in descriptive_stats.ipynb.
 
-We write the results to a CSV file. All output figures are saved to the output/ directory.
+We write the results to a CSV file.
+All output figures are saved to the output/ directory.
 """
 import sys
 import os
@@ -16,7 +18,8 @@ except ModuleNotFoundError:
     sys.path.insert(1, "./src")
     import lib
 
-# run descriptive statistics on the age column, including mean, median, mode, and percentiles
+# run descriptive statistics on the age column, including mean, median,
+# mode, and percentiles
 def descriptive_stats(df, column):
     """Descriptive Statistics function"""
     # get mean, median, mode
@@ -35,12 +38,14 @@ def descriptive_stats(df, column):
     return results
 
 
-# create bar charts for gender, course of study, year of study, marital status, depression, anxiety,
+# create bar charts for gender, course of study, year of study,
+# marital status, depression, anxiety,
 # and panic attacks
 def create_bar_charts(df, out_dir):
     """
-    This function uses the bar_chart function form lib.py to create 7 bar charts in a for loop (for gender,
-    course of study, marital status, depression, anxiety, and panic attacks). It saves each bar chart as
+    This function uses the bar_chart function form lib.py to create 7 bar
+    charts in a for loop (for gender, course of study, marital status,
+    depression, anxiety, and panic attacks). It saves each bar chart as
     a png file to the /output directory.
     """
     columns = [
@@ -103,18 +108,18 @@ def main():
     df = pd.read_csv("../data/student_mental_health.csv")
 
     # get descriptive_statistics results
-    descriptive_stats_results = descriptive_stats(df, "Age")
+    res = descriptive_stats(df, "Age")
 
     # open md file in output/ directory
     with open("../output/descriptive_stats.md", "w") as f:
         # write the results to the md file
-        f.write(f"## Descriptive Statistics Results\n\n")
-        f.write(f"Mean: {descriptive_stats_results['mean']}\n\n")
-        f.write(f"Median: {descriptive_stats_results['median']}\n\n")
-        f.write(f"Mode: {descriptive_stats_results['mode']}\n\n")
-        f.write(f"25th Percentile: {descriptive_stats_results['25th_percentile']}\n\n")
-        f.write(f"50th Percentile: {descriptive_stats_results['50th_percentile']}\n\n")
-        f.write(f"75th Percentile: {descriptive_stats_results['75th_percentile']}\n\n")
+        f.write("## Descriptive Statistics Results\n\n")
+        f.write(f"Mean: {res['mean']}\n\n")
+        f.write(f"Median: {res['median']}\n\n")
+        f.write(f"Mode: {res['mode']}\n\n")
+        f.write(f"25th Percentile: {res['25th_percentile']}\n\n")
+        f.write(f"50th Percentile: {res['50th_percentile']}\n\n")
+        f.write(f"75th Percentile: {res['75th_percentile']}\n\n")
 
     # create bar charts and store as png in output/ directory
     create_bar_charts(df, out_dir="../output")
