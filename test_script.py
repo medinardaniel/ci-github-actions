@@ -1,9 +1,6 @@
-import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import os
 import pytest
-import sys
+# import sys
 # sys.path.append('../')
 from descriptive_stats import descriptive_stats, create_bar_charts
 

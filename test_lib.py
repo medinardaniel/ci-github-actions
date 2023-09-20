@@ -1,7 +1,4 @@
-import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import sys
 # append the path of the src directory to import the lib module
 # sys.path.append('./')
 from lib import get_mean_median_mode, bar_chart, get_percentiles
